@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 2em Arial
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+        document.write(`Oi <strong>${nome}.</strong> Seu nome tem ${nome.length} letras.<br>`)
+        document.write(`Seu nome em maiusculas: ${nome.toUpperCase()}<br>`)
+        document.write(`Em minusculos é ${nome.toLocaleLowerCase()}`)
+    </script>
+
+
+<!-- toUpperCase() deixa em maiusculo -->
+<!-- document.write() é um comando que escreve conteúdo diretamente na página HTML
+(ele mostra o texto no corpo da página).
+
+A palavra "nome" é uma variável que guarda o nome digitado pelo usuário.
+
+O ".length" é uma propriedade das strings em JavaScript que retorna
+a quantidade de caracteres (letras, espaços ou símbolos) que existem
+dentro da variável "nome".
+
+O uso das crases (` `) indica uma template string,
+que permite inserir variáveis dentro do texto usando ${ }.
+
+${nome.length} pega o valor numérico da quantidade de letras do nome
+e coloca esse valor dentro da frase exibida na tela.
+
+document.write(`Seu nome tem ${nome.length} letras`)-->
+
+</body> 
+</html>

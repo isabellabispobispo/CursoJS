@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+    <style>
+        body {
+            background-color: lightpink;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando Estudos com DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">clique em mim</div>
+
+    <script>
+        // zero é o primeiro paragrafo, o segundo é 1, o tercerio é 2...
+        var p1 = window.document.getElementsByTagName('p')[1]
+
+        // var div = window.document.getElementById('msg')
+        // div.style.background = 'lightblue'
+        // div.innerText = 'No aguardo..'
+
+        var d = window.document.querySelector('div#msg')
+        d.style.background = 'lightblue'
+        
+    </script>
+    
+</body>
+</html>
+
+<!-- window.alert(p1.innerText) -->
+<!-- InnerText pega somente o texto, ja o InnerHTML pega o html inteiro, ate mesmo as tags  -->
+<!-- window.document.write('Esta escrito assim: ' + p1.innerText) -->
+ <!-- da pra fazer o getElementBy varias coisas, name, id, tag, class... -->

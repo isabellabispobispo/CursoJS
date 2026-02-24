@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+
+    input, div {
+        font: normal 18pt arial;
+         width: 100px;
+    }
+
+    div#res {
+        width: auto; 
+        margin-top: 20px;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+        }
+
+    // EXPLICAÇÃO DO USO DE `${ }` (Template Literals):
+// 1. As CRASES ( ` ` ) servem para indicar que o texto aceita variáveis dentro dele.
+// 2. O CIFRÃO ( $ ) é um "alerta" para o JavaScript parar de ler o texto e olhar para o código.
+// 3. AS CHAVES ( { } ) servem como um "espaço reservado" ou uma "caixinha". 
+//    O JavaScript resolve o que está dentro das chaves e coloca o resultado naquele local da frase.
+// Isso é chamado de INTERPOLAÇÃO e evita ter que ficar somando textos e variáveis com o sinal de +.
+    </script>
+
+    
+</body>
+</html>

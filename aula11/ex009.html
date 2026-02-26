@@ -7,9 +7,10 @@
 </head>
 <body>
     <h1>Brasileiro ou estrangeiro?</h1>
-    <input type="text" id="txtpais">
+    <input type="text" id="txtpais" autocomplete="off" min="3">
     <input type="button" value="Verificar" onclick="verificar()">
     <div id="res"></div>
+    
 
     <script>
         
@@ -23,8 +24,10 @@
 
              if (pais == 'BRASIL') {
                 res.innerHTML = (`Voce é brasileiro!`)
+                res.innerHTML += ` <img src="https://static.todamateria.com.br/upload/ba/nd/bandeira-do-brasil-og.jpg" alt="Bandeira do Brasil" width="200">`
             } else {
             res.innerHTML = (`Voce é estrangeiro!`)
+            res.innerHTML += `<img src ="https://img.freepik.com/vetores-gratis/passaporte-com-passagens-aereas-em-fundo-branco_1308-90416.jpg?semt=ais_hybrid&w=740&q=80" alt="Passaporte" width="200">`
             }
         }
 
